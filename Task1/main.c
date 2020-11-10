@@ -43,7 +43,7 @@ int main()
 				break;
 		}
 	
-	}while(1==1);
+	}while(1 == 1);
 	
 	
 	

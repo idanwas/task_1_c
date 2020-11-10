@@ -8,7 +8,7 @@ void PictureManipulation()
 {
 	int picture[SIZE][SIZE] = {0};
 	createRandomMatrix((int*)picture, SIZE);
-	printMatrix((int*)picture, SIZE);
+	printMatrix((int*)picture, SIZE, SIZE);
 	int flag = 1; // flag for do-while loop
 
 	do{
@@ -48,7 +48,7 @@ void PictureManipulation()
 		
 		if(option != -1){
 			printf("\n--------- picture after manipulation ---------\n");
-			printMatrix((int*)picture, SIZE);
+			printMatrix((int*)picture, SIZE, SIZE);
 		}
 		
 	}while(flag);
