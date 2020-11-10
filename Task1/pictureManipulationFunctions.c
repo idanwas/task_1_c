@@ -4,39 +4,10 @@
 
 #include "pictureManipulationFunctions.h"
 
-void createRandomMatrix(int* matrix, int size)
-{
-	for(int i = 0; i < size; i++)
-		for(int j = 0; j < size; j++){
-			*matrix = rand() % 100 + 1; // range of random number is 1-100
-			matrix++;
-		}
-			
-	for(int i = 0; i < size; i++)
-		for(int j = 0; j < size; j++){
-			matrix--;
-			if(*matrix < 0 || *matrix > 100)
-				*matrix = *matrix % 100 + 1;
-		}
-}
-
 int getRandomNumber(int min, int max)
 {
 	int rand_num = rand() % (max - min + 1) + min;
 	return rand_num;
-}
-
-void printMatrix(const int* matrix, int size)
-{
-	printf("\n");
-	for(int i = 0; i < size; i++)
-	{
-		for(int j = 0; j < size; j++){
-			printf("%10d", *matrix);
-			matrix++;
-		}
-		printf("\n");
-	}
 }
 
 void rotateClockwise(int* matrix, int size)
@@ -105,5 +76,33 @@ void flipHorizontal(int* matrix, int size)
 
 void swapHorizontal(int* matrix, int size, int i, int j)
 {
+	int temp;
+	temp = *(matrix + size * i + j);
+	// temp = matrix[i][j]
 	
+	*(matrix + size * i + j) = *(matrix + size * (size - i - 1) + j);
+	// matrix[i][j] = matrix[size-i-1][j]
+	
+	*(matrix + size * (size - i - 1) + j) = temp;
+	//matrix[size-i-1][j] = temp = matrix[i][j]
+}
+
+void flipVertical(int* matrix, int size)
+{
+	for(int i = 0; i < size; i++)
+		for(int j = 0; j < size / 2; j++)
+			swapVertical((int*)matrix, size, i, j);
+}
+
+void swapVertical(int* matrix, int size, int i, int j)
+{
+	int temp;
+	temp = *(matrix + size * i + j);
+	// temp = matrix[i][j]
+	
+	*(matrix + size * i + j) = *(matrix + size * i + (size - j - 1));
+	// matrix[i][j] = matrix[i][size-j-1]
+	
+	*(matrix + size * i + (size - j - 1)) = temp;
+	//matrix[i][size-j-1] = temp = matrix[i][j]
 }

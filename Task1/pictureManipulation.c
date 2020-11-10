@@ -1,17 +1,15 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 #include "pictureManipulation.h"
 #include "pictureManipulationFunctions.h"
+#include "arrays.h"
 
 void PictureManipulation()
 {
-	srand(time(NULL));
 	int picture[SIZE][SIZE] = {0};
 	createRandomMatrix((int*)picture, SIZE);
 	printMatrix((int*)picture, SIZE);
-	int flag = 1;
+	int flag = 1; // flag for do-while loop
 
 	do{
 		printMenu();
@@ -30,12 +28,12 @@ void PictureManipulation()
 				
 			case 3:
 				printf("\nYou chose #3\n");
-				//flipHorizontal((int*)picture, SIZE);
+				flipHorizontal((int*)picture, SIZE);
 				break;
 				
 			case 4:
 				printf("\nYou chose #4\n");
-				//flipVertical((int*)picture, SIZE);
+				flipVertical((int*)picture, SIZE);
 				break;
 				
 			case -1:
@@ -47,8 +45,11 @@ void PictureManipulation()
 				printf("\nWrong input! Please try again...\n");
 				break;
 		}
-		printf("\n--------- picture after manipulation ---------\n");
-		printMatrix((int*)picture, SIZE);
+		
+		if(option != -1){
+			printf("\n--------- picture after manipulation ---------\n");
+			printMatrix((int*)picture, SIZE);
+		}
 		
 	}while(flag);
 }

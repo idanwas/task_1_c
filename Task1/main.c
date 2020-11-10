@@ -2,7 +2,7 @@
 #include <ctype.h>
 
 #include "pictureManipulation.h"
-
+#include "numGame.h"
 
 
 int main()
@@ -13,8 +13,6 @@ int main()
 		printf("\nP/p - Picture Manipulation");
 		printf("\nN/n - Number Game");
 		printf("\nE/e - Quit\n");
-
-		printf("\n\nthere is a change in here\n\n");
 		
 		char option;
 
@@ -33,6 +31,7 @@ int main()
 				
 			case 'n':
 				printf("\nNumber Game Function\n");
+				NumberGame();
 				break;
 				
 			case 'e':
