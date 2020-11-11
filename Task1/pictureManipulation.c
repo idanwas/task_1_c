@@ -17,22 +17,18 @@ void PictureManipulation()
 		switch(option)
 		{
 			case 1:
-				printf("\nYou chose #1\n");
 				rotateClockwise((int*)picture, SIZE);
 				break;
 				
 			case 2:
-				printf("\nYou chose #2\n");
 				rotateCounterClockwise((int*)picture, SIZE);
 				break;
 				
 			case 3:
-				printf("\nYou chose #3\n");
 				flipHorizontal((int*)picture, SIZE);
 				break;
 				
 			case 4:
-				printf("\nYou chose #4\n");
 				flipVertical((int*)picture, SIZE);
 				break;
 				

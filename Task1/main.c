@@ -16,7 +16,6 @@ int main()
 		
 		char option;
 
-		
 		do{
 			scanf("%c", &option);
 		}while(isspace(option));
@@ -30,7 +29,6 @@ int main()
 				break;
 				
 			case 'n':
-				printf("\nNumber Game Function\n");
 				NumberGame();
 				break;
 				
@@ -44,8 +42,6 @@ int main()
 		}
 	
 	}while(1 == 1);
-	
-	
 	
 	return 0;
 }
