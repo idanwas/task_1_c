@@ -2,7 +2,7 @@
 
 #include "pictureManipulation.h"
 #include "pictureManipulationFunctions.h"
-#include "arrays.h"
+#include "generalFunctions.h"
 
 void PictureManipulation()
 {

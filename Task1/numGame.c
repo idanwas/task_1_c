@@ -2,7 +2,7 @@
 
 #include "numGame.h"
 #include "numGameFunctions.h"
-#include "arrays.h"
+#include "generalFunctions.h"
 
 void NumberGame()
 {
