@@ -3,7 +3,7 @@
 
 #define ROWS 5
 #define COLS 4
-#define SHUFFLE_COUNT 10
+#define SHUFFLE_COUNT 20
 
 void NumberGame();
 
