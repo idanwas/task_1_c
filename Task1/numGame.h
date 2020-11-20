@@ -1,9 +1,9 @@
 #ifndef __NUM_GAME_H
 #define __NUM_GAME_H
 
-#define ROWS 5
+#define ROWS 4
 #define COLS 4
-#define SHUFFLE_COUNT 20
+#define SHUFFLE_COUNT 10
 
 void NumberGame();
 

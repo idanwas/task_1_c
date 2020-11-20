@@ -12,8 +12,6 @@ int getRandomNumber(int min, int max)
 
 void rotateClockwise(int* matrix, int size)
 {
-	printf("\nrotate clockwise\n");
-	
 	for(int i = 0; i < (size / 2); i++)
 		for(int j = i; j < (size - i - 1); j++)
 			swapElementsClockwise((int*)matrix, size, i , j);
@@ -33,8 +31,6 @@ void swapElementsClockwise(int* matrix, int size, int i, int j)
 
 void rotateCounterClockwise(int* matrix, int size)
 {
-	printf("\nrotate counter clockwise\n");
-	
 	for(int i = 0; i < (size / 2); i++)
 		for(int j = i; j < (size - i - 1); j++)
 			swapElementsCounterClockwise((int*)matrix, size, i , j);

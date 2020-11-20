@@ -46,7 +46,7 @@ void PictureManipulation()
 			printf("\n--------- picture after manipulation ---------\n");
 			printMatrix((int*)picture, SIZE, SIZE);
 		}
-		else
+		else if(option != -1)
 			printf("\nNothing happened.");
 		
 	}while(flag);
