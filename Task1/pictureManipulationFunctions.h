@@ -1,5 +1,5 @@
-#ifndef __PIC_MAN_FUN_H
-#define __PIC_MAN_FUN_H
+#ifndef __PIC_MAN_FUNCTS_H
+#define __PIC_MAN_FUNCTS_H
 
 int getRandomNumber(int min, int max);
 
@@ -21,4 +21,4 @@ void flipVertical(int* matrix, int size);
 
 void swapVertical(int* matrix, int size, int i, int j);
 
-#endif //__PIC_MAN_FUN_H
+#endif //__PIC_MAN_FUNCTS_H

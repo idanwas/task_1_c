@@ -96,8 +96,5 @@ int getDirection(int* board, int rows, int cols, int zero_row, int zero_col, int
 			return 4;
 	}		
 		
-	return 0;
-	
+	return 0;	
 }
-
-

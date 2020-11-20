@@ -4,10 +4,10 @@
 #include "pictureManipulation.h"
 #include "numGame.h"
 
-
 int main()
 {
-
+	int flag = 1; // flag for do-while loop
+	
 	do{
 		printf("\nPlease choose one of the following options");
 		printf("\nP/p - Picture Manipulation");
@@ -15,7 +15,6 @@ int main()
 		printf("\nE/e - Quit\n");
 		
 		char option;
-
 		do{
 			scanf("%c", &option);
 		}while(isspace(option));
@@ -34,14 +33,14 @@ int main()
 				
 			case 'e':
 				printf("\nBye Bye\n");
-				return 0;
+				flag = 0;
+				break;
 				
 			default:
 				printf("\nWrong input! Please try again...\n");
 				break;
 		}
-	
-	}while(1 == 1);
+	}while(flag);
 	
 	return 0;
 }
