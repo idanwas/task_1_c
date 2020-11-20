@@ -1,8 +1,7 @@
 #ifndef __PIC_MAN_H
 #define __PIC_MAN_H
 
-#define COLS 4
-#define SIZE 4
+#define SIZE 5
 
 void PictureManipulation();
 
