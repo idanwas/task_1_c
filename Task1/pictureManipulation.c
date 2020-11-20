@@ -42,10 +42,12 @@ void PictureManipulation()
 				break;
 		}
 		
-		if(option != -1){
+		if(option > 0 && option <= 4){
 			printf("\n--------- picture after manipulation ---------\n");
 			printMatrix((int*)picture, SIZE, SIZE);
 		}
+		else
+			printf("\nNothing happened.");
 		
 	}while(flag);
 }
@@ -63,10 +65,7 @@ void printMenu()
 int getOption()
 {
 	int option;
-	int res = scanf("%d", &option);
-	if(res == 0){
-		printf("\nWrong input!\n");
+	if(scanf("%d", &option) == 0)
 		return 0;
-	}
 	return option;
 }

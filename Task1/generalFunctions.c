@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-#include "arrays.h"
+#include "generalFunctions.h"
 #include "numGameFunctions.h"
 
 void printMatrix(const int* matrix, int rows, int cols)
