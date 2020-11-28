@@ -4,12 +4,6 @@
 
 #include "pictureManipulationFunctions.h"
 
-int getRandomNumber(int min, int max)
-{
-	int rand_num = rand() % (max - min + 1) + min;
-	return rand_num;
-}
-
 void rotateClockwise(int* matrix, int size)
 {
 	for(int i = 0; i < (size / 2); i++)

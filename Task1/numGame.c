@@ -23,15 +23,14 @@ void NumberGame()
 		}
 		
 		printf("\nYour step: ");
-		int num;
-		scanf("%d", &num);
+		int option = getOption();
 		
 		// check if number is out of possible options --> { 1 <= num < ROWS * COLS }
-		if((num < 1) || (num >= ROWS * COLS)){ 
+		if((option < 1) || (option >= ROWS * COLS)){ 
 			printf("\nInvalid step!");
 		}
 		else{
-			int direction = getDirection((int*)board, ROWS, COLS, zero_row, zero_col, num);
+			int direction = getDirection((int*)board, ROWS, COLS, zero_row, zero_col, option);
 
 			switch(direction){
 				case 1:
@@ -55,12 +54,12 @@ void NumberGame()
 			}
 		}
 	}while(1 == 1);
-	
 }
 
 int checkBoard(int* board, int rows, int cols, int* zero_row, int* zero_col)
 {
-	if((*zero_row != ROWS - 1) || (*zero_col != COLS - 1)) // if 0 is not in the last row and col then stop checking
+	// if 0 is not in the last row and col then stop checking
+	if((*zero_row != ROWS - 1) || (*zero_col != COLS - 1))
 		return 0;
 		
 	for(int i = 1; i < ROWS * COLS; i++, board++)

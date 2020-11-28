@@ -72,10 +72,10 @@ int moveLeft(int* board, int rows, int cols, int* zero_row, int* zero_col)
 	return 1;
 }
 
+// this function returns the direction between the zero and the selected number
+// 1 - UP , 2 - RIGHT , 3 - DOWN , 4 - LEFT , 0 - invalid
 int getDirection(int* board, int rows, int cols, int zero_row, int zero_col, int num)
 {
-	// 1 - UP , 2 - RIGHT , 3 - DOWN , 4 - LEFT , 0 - invalid
-	
 	if(zero_row != 0){ // check upper side
 		if(*(board + cols * ((zero_row) - 1) + (zero_col)) == num)
 			return 1;

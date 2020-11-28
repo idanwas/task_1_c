@@ -1,8 +1,6 @@
 #ifndef __PIC_MAN_FUNCTS_H
 #define __PIC_MAN_FUNCTS_H
 
-int getRandomNumber(int min, int max);
-
 void rotateClockwise(int* matrix, int size);
 
 void swapElementsClockwise(int* matrix, int size, int i, int j);

@@ -7,6 +7,4 @@ void PictureManipulation();
 
 void printMenu();
 
-int getOption();
-
 #endif //__PIC_MAN_H

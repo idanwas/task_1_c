@@ -53,3 +53,11 @@ void shuffleBoardGame(int* board, int rows, int cols, int* zero_row, int* zero_c
 		}
 	}
 }
+
+int getOption()
+{
+	int option;
+	if(scanf("%d", &option) == 0)
+		return 0;
+	return option;
+}

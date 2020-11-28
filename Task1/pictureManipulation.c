@@ -42,6 +42,7 @@ void PictureManipulation()
 				break;
 		}
 		
+		// check - if option was relevant then print picture after manipulation
 		if(option > 0 && option <= 4){
 			printf("\n--------- picture after manipulation ---------\n");
 			printMatrix((int*)picture, SIZE, SIZE);
@@ -60,12 +61,4 @@ void printMenu()
 	printf("\n3 - Flip horizontal");
 	printf("\n4 - Flip vertical");
 	printf("\n-1 - Quit\n");
-}
-
-int getOption()
-{
-	int option;
-	if(scanf("%d", &option) == 0)
-		return 0;
-	return option;
 }
